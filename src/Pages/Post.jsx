@@ -15,10 +15,10 @@ const Post = (props) => {
   const [title, setTitle] = useState(props.new.title);
   const [message, setMessage] = useState(props.new.message);
 
-  const API_URL = process.env.REACT_APP_API_URL;
-
 
   const handleClose = () => setShow(false);
+
+  const API_URL = 'https://json-backend-server.onrender.com/posts'
 
 
   async function deletePost(id) {
@@ -26,7 +26,7 @@ const Post = (props) => {
     if (confirmed) {
 
       try {
-        await fetch(`${API_URL}/posts/${id}`, {
+        await fetch(`${API_URL}/${id}`, {
           method: 'DELETE',
           headers: {
             "Content-Type": "application/json"
@@ -46,7 +46,7 @@ const Post = (props) => {
   async function updatePost(id) {
 
   try {
-    const response = await fetch(`${API_URL}/posts/${id}`, {
+    const response = await fetch(`${API_URL}/${id}`, {
       method: 'PUT',
       body: JSON.stringify({title, message}),
       headers: {
