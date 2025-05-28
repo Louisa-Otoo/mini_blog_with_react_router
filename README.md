@@ -43,4 +43,4 @@ A simple jounaling application built with **React** for the frontend and **JSON 
 ### 4. Start the React app
 - In a new terminal:
   - npm start
-**The React app will run on http://localhost:3000, and the JSON Server will be available at http://localhost:4000/posts.**
+  - The React app will run on http://localhost:3000, and the JSON Server will be available at http://localhost:4000/posts.
