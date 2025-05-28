@@ -15,6 +15,8 @@ const Post = (props) => {
   const [title, setTitle] = useState(props.new.title);
   const [message, setMessage] = useState(props.new.message);
 
+  const API_URL = process.env.REACT_APP_API_URL;
+
 
   const handleClose = () => setShow(false);
 
@@ -24,7 +26,7 @@ const Post = (props) => {
     if (confirmed) {
 
       try {
-        await fetch(`http://localhost:4000/posts/${id}`, {
+        await fetch(`${API_URL}/posts/${id}`, {
           method: 'DELETE',
           headers: {
             "Content-Type": "application/json"
@@ -44,7 +46,7 @@ const Post = (props) => {
   async function updatePost(id) {
 
   try {
-    const response = await fetch(`http://localhost:4000/posts/${id}`, {
+    const response = await fetch(`${API_URL}/posts/${id}`, {
       method: 'PUT',
       body: JSON.stringify({title, message}),
       headers: {

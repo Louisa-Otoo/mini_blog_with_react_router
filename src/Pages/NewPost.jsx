@@ -75,8 +75,10 @@ export default NewPost;
 
 
 export const postAction = async (submission) => {
+  const API_URL = process.env.REACT_APP_API_URL;
+
   try {
-    const response = await fetch('http://localhost:4000/posts', {
+    const response = await fetch(`${API_URL}/posts`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
