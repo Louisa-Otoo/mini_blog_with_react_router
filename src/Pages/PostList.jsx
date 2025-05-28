@@ -32,7 +32,8 @@ export const PostList = () => {
 
 // create fxn for fetching data and then pass it as a loader
 export const postsLoader = async() => {
-    const data = await fetch('http://localhost:4000/posts')
+  const API_URL = process.env.REACT_APP_API_URL;
+    const data = await fetch(API_URL)
     return data.json()
 }  
 

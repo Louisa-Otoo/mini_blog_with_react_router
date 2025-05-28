@@ -75,12 +75,12 @@ export default NewPost;
 
 
 export const postAction = async (submission) => {
-  // const API_URL = process.env.REACT_APP_API_URL;
-  const API_URL ='https://json-backend-server.onrender.com/posts'
+  const API_URL = process.env.REACT_APP_API_URL;
+  // const API_URL ='https://json-backend-server.onrender.com/posts'
 
   try {
     // const response = await fetch(API_URL, {
-    const response = await fetch(`${API_URL}`, {
+    const response = await fetch(`${API_URL}/post`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

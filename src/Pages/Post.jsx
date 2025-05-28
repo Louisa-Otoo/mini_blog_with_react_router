@@ -18,7 +18,7 @@ const Post = (props) => {
 
   const handleClose = () => setShow(false);
 
-  const API_URL = 'https://json-backend-server.onrender.com/posts'
+  const API_URL = process.env.REACT_APP_API_URL
 
 
   async function deletePost(id) {
