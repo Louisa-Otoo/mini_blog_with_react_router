@@ -78,7 +78,7 @@ export const postAction = async (submission) => {
   const API_URL = process.env.REACT_APP_API_URL;
 
   try {
-    const response = await fetch(`${API_URL}/posts`, {
+    const response = await fetch(`${API_URL}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
