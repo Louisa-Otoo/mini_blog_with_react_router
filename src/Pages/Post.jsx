@@ -26,7 +26,7 @@ const Post = (props) => {
     if (confirmed) {
 
       try {
-        await fetch(`${API_URL}/${id}`, {
+        await fetch(`${API_URL}/posts/${id}`, {
           method: 'DELETE',
           headers: {
             "Content-Type": "application/json"
@@ -46,7 +46,7 @@ const Post = (props) => {
   async function updatePost(id) {
 
   try {
-    const response = await fetch(`${API_URL}/${id}`, {
+    const response = await fetch(`${API_URL}/posts/${id}`, {
       method: 'PUT',
       body: JSON.stringify({title, message}),
       headers: {
