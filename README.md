@@ -31,14 +31,14 @@ A simple jounaling application built with **React** for the frontend and **JSON 
 ## 🖥️ Getting Started
 
 ### 1. Clone the repository
-- git clone https://github.com/Louisa-Otoo/mini_blog_with_react_router.git
-- cd mini_blog_with_react_router
+  - git clone https://github.com/Louisa-Otoo/mini_blog_with_react_router.git
+  - cd mini_blog_with_react_router
 
 ### 2. Install dependencies
-- npm install
+  - npm install
 
 ### 3. Start the JSON Server
-- npx json-server --watch db.json --port 4000
+  - npx json-server --watch db.json --port 4000
 
 ### 4. Start the React app
 - In a new terminal:
